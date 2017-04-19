@@ -1,0 +1,370 @@
+/* These two rules specify that padding, content and border margin measurements are included in the element's width and height */
+
+html {
+  box-sizing: border-box;
+  font-size: .8rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  /*border: 0.25px solid gray; /* Added so I have a better idea of element size and layout*/
+}
+
+
+/* MOBILE FIRST STYLES */
+
+body {
+  font-size: 1.25em;
+  line-height: 1.4;
+}
+
+main,
+footer {
+  /*Alias: container*/
+  margin: 0 auto;
+  max-width: 1200px;
+  /*Sets the maximum possible size of any element within the container | Represents 62.5% of most common screen size of 1920px*/
+}
+
+section {
+  /*Alias: row*/
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0;
+  margin: 0 auto;
+}
+
+article,
+aside {
+  /*Alias: column*/
+  flex-basis: 100%;
+  /*Specifies initial length of flex-item: here assigns full page width*/
+  flex: 1;
+}
+
+
+/* === LISTS == */
+
+
+/*ul,
+ol {
+  padding-left: 1.75em;
+  padding-right: 0.75em;
+} */
+
+
+/* li {
+  margin-top: .375em;
+  margin-bottom: .375em;
+} */
+
+
+/* === TYPE ===
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: 3.5rem; line-height: 1.2; letter-spacing: -0.1rem;}
+h2 { font-size: 3.1rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 2.7rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 2.3rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 1.9rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+*/
+
+p {
+  margin-top: 0;
+  text-align: center;
+}
+
+
+/* ==== CUSTOM STYLES ==== */
+
+.main-header {
+  background: #2B78E3;
+}
+
+.header-container {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  height: 35px;
+  color: #fff;
+}
+
+div#main-logo {
+  flex: 1.5;
+  display: flex;
+  padding-right: 1%;
+}
+
+div#main-logo h2 {
+  margin: 0;
+  align-self: flex-end;
+}
+
+div#main-logo img {
+  align-self: flex-end;
+  margin-right: 5px;
+}
+
+header form {
+  flex: 5.5;
+  margin: 0;
+  align-self: center;
+}
+
+header input[type="search"] {
+  width: 100%;
+  border: 1.5px solid gray;
+  padding: 3px;
+}
+
+header p {
+  flex: 2;
+  margin: 0;
+  font-weight: bold;
+  align-self: center;
+  text-align: right;
+  padding-right: 5px;
+}
+
+
+/* === HERO STYLES === */
+
+div#cover-photo {
+  display: flex;
+  max-width: 1200px;
+  height: 350px;
+  background: url(#);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  margin: 0;
+  border: 2px solid gray;
+}
+
+img#profile-pic {
+  min-width: 75px;
+  min-height: 75px;
+  align-self: flex-end;
+  margin: 1.1%;
+  margin-bottom: -25px;
+  border: 3px solid gray;
+  height: 150px;
+  width: 150px;
+}
+
+div#cover-photo h1 {
+  align-self: flex-end;
+  color: #fff;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 1%;
+  width: 80%;
+  font-size: 1.6em;
+}
+
+.hero-banner footer {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  border: 2px solid gray;
+  border-top: none;
+}
+
+.hero-banner footer ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-basis: 100%;
+}
+
+.hero-banner footer li {
+  list-style: none;
+  padding: 5px 15px;
+  flex: 2;
+  border: 1px solid gray;
+}
+
+.hero-banner footer li:first-child {
+  border-top: none;
+  flex: 2.25;
+}
+
+.hero-banner footer li:last-child {
+  text-align: right;
+  flex: 5.5;
+}
+
+
+/* ==== ABOUT STYLES ==== */
+
+section.about {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 10px;
+  flex-basis: 100%;
+  border: 2px solid gray;
+}
+
+section.about header {
+  flex-basis: 100%;
+  background: #EEE;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border-bottom: 2px solid gray;
+}
+
+section.about header > h3 {
+  align-self: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+section.about header > button {
+  margin: 4px 5px 4px 0;
+  padding: 5px;
+  max-width: 150px;
+  align-self: center;
+  color: #fff;
+  border: 2px solid black;
+  background: #2B78E3;
+}
+
+section aside#personal-info {
+  flex: 0.45;
+  align-self: center;
+}
+
+section aside > table {
+  margin: 5% 10%;
+  text-align: left;
+  width: 80%;
+}
+
+section aside table th {
+  font-size: 20px;
+}
+
+section aside table td {
+  width: 50%;
+  padding: 5px 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+section aside table td:first-child {
+  font-weight: bold;
+}
+
+section aside#personal-branding {
+  flex: 0.55;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+aside div.personal-about {
+  margin: 5% 10%;
+  height: auto;
+  width: 80%;
+}
+
+aside div.personal-about h3,
+aside div.personal-about p {
+  margin: 10px 0;
+  text-align: left;
+}
+
+aside div.personal-about h3 {
+  font-size: 20px;
+}
+
+aside div.personal-about p {
+  font-size: 1em;
+}
+
+
+/* Smaller SCREEN STYLES */
+
+@media screen and (max-width:768px) {
+  .header-container {
+    display: flex;
+    flex-flow: column;
+    height: auto;
+  }
+  div#main-logo {
+    align-self: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  header form {
+    width: 60%;
+  }
+  header p {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  div#cover-photo {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  img#profile-pic {
+    align-self: flex-start;
+    margin-top: auto;
+    margin-left: 10px;
+  }
+  div#cover-photo h1 {
+    align-self: flex-start;
+    margin-left: 10px;
+  }
+  .hero-banner footer ul {
+    flex-flow: column wrap;
+  }
+  .hero-banner footer li:first-child {
+    display: none;
+  }
+  section.about {
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 10px;
+    flex-basis: 100%;
+  }
+  section.about header > h3 {
+    flex-basis: 100%;
+    margin: 0;
+  }
+  section.about header > button {
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    flex-basis: 70%;
+  }
+  section aside table td {
+    width: 10%;
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 1190px) {
+  img#profile-pic {
+    margin-bottom: 5px;
+  }
+  .hero-banner footer li:first-child {
+    display: none;
+  }
+}
